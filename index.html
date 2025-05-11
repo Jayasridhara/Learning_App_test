@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <!-- In your HTML <head> -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -24,6 +25,12 @@
   font-family:"Rowdies", sans-serif;
 
   }
+  .font-saira
+  {
+   
+  font-family: "Saira", sans-serif;
+    
+  }
 }
 @theme
   {
@@ -35,8 +42,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="text-black bg-white font-righteous w-[100%] ">
-
+<body class="text-black bg-white font-righteous overflow-x-hidden w-full max-w-screen  mx-auto flex flex-col  content-center">
   <!-- Header -->
   <header class="flex flex-wrap justify-between items-center px-10  bg-white text-black md:px-10">
     <div class="flex items-center gap-2">
@@ -73,8 +79,8 @@
   </header>
 
   <!-- Hero Section -->
-  <div class="bg-[linear-gradient(45deg,_#4A16BD_50%,_#04016C_100%,_#ffffff_100%)]  w-[100%] flex justify-center  py-5 text-white "> 
-    <div class="flex flex-col md:flex-row items-start justify-between w-[90%] mt-20 relative" >
+  <div class="bg-[linear-gradient(45deg,_#4A16BD_40%,_#04016C_100%,_#ffffff_100%)]  max-w-screen flex justify-center  py-5 text-white "> 
+    <div class="flex flex-col  mx-auto md:flex-row items-start justify-between w-[90%] mt-20 md:relative" >
     <div class=" flex max-w-xl  flex-col items-start justify-start">
       <p class="uppercase leading-[20px] tracking-[3px] text-[18px]  text-gray-300 text-left">Successful coaches are visionaries</p>
       <h1 class="text-[80px] font-bold  mt-4">
@@ -106,22 +112,25 @@
         <p class="mt-2 text-blue-300 text-xs">4.9</p>
      </div>
     </div >    
-    <div class="flex justify-center items-center relative  w-full max-w-[500px] ">
+    <div class="flex justify-center items-center relative  w-full max-w-[500px]">
       <!-- Overlay image wrapper -->
-      <div class="absolute bottom-0 w-full h-full  flex items-center justify-center gap-2.5 z-[1] opacity-80 bottom-20 l-20 ml-40">
+      <!-- Foreground image -->
+      <img src="./src/asset/image/women-image.png" alt="Coach" class="rounded-full object-cover w-full h-auto z-10 border-0" />
+      <div class="absolute bottom-0 w-full h-full  flex items-center justify-center gap-2.5 z-[1] top-10 ">
         <div>
-          <img src="./src/asset/image/ellipe1.png" class="w-[100%] h-[100%] object-fill"/>
+          <img src="./src/asset/image/ellipe1.png" class="w-full h-full object-cover "/>
         </div>
       </div>
-      <!-- Foreground image -->
-      <img src="./src/asset/image/women-image.png" alt="Coach" class="rounded-xl object-cover w-full h-auto z-10" />
-    </div>    
-  </div>
-     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 mt-8">
-                <span class="w-3 h-3 bg-primary rounded-full">.</span>
-                <span class="w-3 h-3 bg-tint-3 rounded-full">.</span>
-                <span class="w-3 h-3 bg-tint-3 rounded-full">.</span>
+    </div>
+    <div class="hidden fixed md:block md:absolute left-180 top-120 ">
+      <div class="border-t-2 border-l-2 border-r-2 border-dashed border-[#D9D9D9] pt-6 px-6 rounded-t-full">
+        <div class="border-t-2 border-l-2 border-r-2 border-solid border-[#D9D9D9] rounded-t-full overflow-hidden">
+          <img src="./src/asset/image/page_1design.png" class="w-full h-full object-cover pt-6 px-6" alt="image not found">
+        </div>
       </div>
+    </div> 
+    </div> 
+  </div>    
 </div>
 </div>
   <!-- Logos Section -->
@@ -138,10 +147,11 @@
   <section class="bg-[linear-gradient(to_bottom,_#F0F3FF,_#D9ECFF)] w-[100%] flex flex-col  items-center justify-center bg-white text-black  mt-1 py-20 md:relative">                  
       <div class="flex flex-col justify-center items-center pb-5">
           <h1 class="font-rowdies color-black text-[45px]">Featured <span class="text-headcolor">Course</span></h1>
-          <p class="font-rowdies color-black text-[25px]">The feature courses are we invented our teaching part</p>
+          <p class="font-[rowdies] color-black text-[25px]">The feature courses are we invented our teaching part</p>
           <div class="hidden md:block  md:absolute left-30  top-20">
             <img src="./src/asset/image/pg2-headimg.png" class="mix-blend-multiply" alt="image not found">
           </div>
+           
       </div> 
       <div class="flex flex-wrap flex-col md:flex-row items-center justify-between w-[90%] mt-[20px] gap-y-10 " >
           <!-- Course Card -->
@@ -212,10 +222,10 @@
   </div>
   </section>
  
-  <section class="bg-[linear-gradient(45deg,_#739FE8_30%,_#4F18CA_100%)] w-[100%] h-full flex flex-col  justify-center items-center bg-white text-white  py-20">
+  <section class="bg-[linear-gradient(45deg,_#739FE8_30%,_#4F18CA_100%)] w-[100%] h-full flex flex-col  justify-center items-center bg-white text-white  py-20 md:relative">
       <div class="flex flex-col justify-center items-center w-full mb-20 ">
         <h1 class="font-rowdies color-black text-[45px] ">Why <span class="text-mycolor"> learn</span> with our courses?</h1>
-        <p class="font-rowdies color-black text-[25px] ml-10"> We are providing the best courses and top classes.And <br>extradinery placement training.....</p>
+        <p class="font-saira color-black text-[25px] ml-5"> We are providing the best courses and top classes.And <br>extradinery placement training.....</p>
       </div> 
       <div class="flex flex-col md:flex-row justify-center align-center gap-20 p-10 ">
         <div class="flex flex-col items-center border-r-2 border-dashed border-white-400  p-10">
@@ -233,7 +243,19 @@
           <h3 class="font-bold text-xl mb-2">03. Work</h3>
           <p class="text-sm max-w-xs">Great companies are built in the office, with hard work put in by team.</p>
         </div>
-      </div>  
+      </div>
+  <div class="hidden fixed md:block md:absolute left-0 top-50">
+   <div class="border-t-2 border-l-2 border-r-2 border-dashed border-[#D9D9D9] pt-6 px-6 rounded-t-full translate rotate-45">
+        <div class="border-t-2 border-l-2 border-r-2 border-solid border-[#D9D9D9] rounded-t-full overflow-hidden">
+          <img src="./src/asset/image/page_1design.png" class="w-40 h-50 object-cover pt-6 px-6" alt="image not found">
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
   </section>  
    <section class="w-[100%] flex flex-col  items-center justify-center bg-white text-black bg-[linear-gradient(to_bottom,_#F0F3FF,_#D9ECFF)] py-20">
                    
@@ -275,63 +297,67 @@
       </div>
     </div>
   </section>
-    <section class="w-[100%] h-full flex flex-col  justify-center items-center bg-white text-white  mt-10 py-10 z-2">
-     <div class="flex flex-col justify-center items-center  bg-[linear-gradient(45deg,_#ffffff_0%,_#00B3FF_0%,_#1901F8_20%,_#E441FF_100%)]  w-4/5 max-w-6xl rounded-2xl p-18 relative">
+    <section class="w-[100%] h-full flex flex-col  justify-center items-center bg-white text-white  mt-10 py-10 z-2 md:relative ">
+      <div class="flex flex-col justify-center items-center  bg-[linear-gradient(45deg,_#ffffff_0%,_#00B3FF_0%,_#1901F8_20%,_#E441FF_100%)]  w-4/5 max-w-6xl rounded-2xl p-18  md:relative">
       <h1 class="text-white text-[45px]  text-center mb-4">Subscribe For Get Update<br>Every New Courses</h1>
       <p class="text-white/80 text-center mb-6">20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
-      <div class="flex">
-        <input type="email" placeholder="enter your email" class="px-4 py-4 rounded-xl focus:outline-none w-64  ">
+      <div class="container mx-auto px-4 py-8 flex justify-center">
+      <div class="flex w-full max-w-md">
+        <input type="email" placeholder="Enter your email" class="px-4 py-4 bg-gray-50 opacity-40 text-gray-900 rounded-l-xl focus:outline-none w-full">
         <button class="bg-blue-900 px-8 py-4 rounded-r-xl text-white font-semibold">Subscribe</button>
-      </div> 
-    <div class="absolute top-2 left-140 w-112 h-112  opacity-30 hidden md:block ">
-      <img src="./src/asset/image/Polygon 7.png" alt="student" />
-    </div>
-     <div class="absolute top-85 right-190 w-110 h-110 opacity-50 hidden md:block ">
-      <img src="./src/asset/image/Polygon 7.png" alt="student" />
-    </div>
-     <div class="absolute top-110 right-100 w-110 h-110 opacity-50 hidden md:block ">
-      <img src="./src/asset/image/Polygon 7.png" alt="student" />
-    </div>
-    <div class="absolute top-8 left-8 w-12 h-12 rounded-full overflow-hidden">
+        
+      </div>
+</div>  
+    <div class="md:absolute top-8 left-8 w-12 h-12 rounded-full overflow-hidden hidden md:block ">
       <img src="./src/asset/image/page5-1.png" alt="student" />
     </div>
-    <div class="absolute top-8 right-8 w-12 h-12 rounded-full overflow-hidden">
+    <div class="md:absolute top-8 right-8 w-12 h-12 rounded-full overflow-hidden hidden md:block">
       <img src="./src/asset/image/page5-2.png" alt="student" />
     </div>
-    <div class="absolute bottom-20- left-30 w-12 h-12 rounded-full overflow-hidden hidden md:block">
+    <div class="md:absolute bottom-20- left-30 w-12 h-12 rounded-full overflow-hidden hidden md:block">
       <img src="./src/asset/image/page5-3.png" alt="student" /> 
     </div>
-    <div class="absolute top-44 right-30 w-12 h-12 rounded-full overflow-hidden hidden  md:block">
+    <div class="md:absolute top-44 right-30 w-12 h-12 rounded-full overflow-hidden hidden  md:block">
       <img src="./src/asset/image/page5-4.png" alt="student" />
     </div>
-    <div class="absolute bottom-8 left-8 w-12 h-12 rounded-full overflow-hidden">
+    <div class="md:absolute bottom-8 left-8 w-12 h-12 rounded-full overflow-hidden hidden md:block">
       <img src="./src/asset/image/page5-5.png" alt="student" />
     </div>
-    <div class="absolute bottom-8 right-8 w-12 h-12 rounded-full overflow-hidden">
+    <div class="md:absolute bottom-8 right-8 w-12 h-12 rounded-full overflow-hidden hidden md:block">
       <img src="./src/asset/image/page5-6.png" alt="student" />
     </div>
     </div>
-
-     <div class="flex flex-col md:flex-row justify-center items-center w-full max-w-3xl mt-16 mb-10">
+   
+     <div class="flex flex-col md:flex-row justify-center items-center w-full max-w-3xl mt-30 mb-10 md:max-w-6xl">
       <div class="relative flex justify-center items-center w-full h-full">
-      <img src="./src/asset/image/Rectangle 8691.png" class="w-full h-auto" />
+      <img src="./src/asset/image/Rectangle 8691.png" class="w-full h-auto"/>
       <div class="absolute w-[150px] h-[150px] rounded-full  bg-[#F5EBEB] opacity-40"></div>  
       <div class="absolute w-[200px] h-[200px] rounded-full bg-[#FFFAEC] opacity-20"></div>  
       <div class="absolute inset-0 flex justify-center items-center">
        
-      <div class="absolute w-[200px] h-[200px] rounded-full  border-gray-300"></div>
-        
-        <div class="p-8  w-[100px] h-[100px] flex justify-center items-center rounded-full shadow-lg bg-[linear-gradient(to_right,_#21B573,_#7F56D9)]">
+      <div class="absolute w-[200px] h-[200px] rounded-full  border-gray-300"></div>  
+        <div class="p-8 w-[100px] h-[100px] flex justify-center items-center rounded-full shadow-lg bg-[linear-gradient(to_right,_#21B573,_#7F56D9)]">
           <span class="text-white text-3xl">▶</span>
         </div>  
       </div>
-      <div class="hidden md:block w-[300px] h-[100px] md:absolute right-0 left-146 top-80 transform -translate-y-1/2">
+      
+    </div>
+     <div class="hidden md:block md:absolute right-60 top-330 transform -translate-y-1/2">
         <img src="./src/asset/image/banner_right.png-removebg-preview.png" class="mix-blend-multiply" alt="image not found">
       </div>
-    </div>
+      <div class="hidden md:block  md:absolute left-220  top-10 opacity-40 ">
+            <img src="./src/asset/image/Polygon 7.png" alt="student" />
+      </div>
+      <div class="hidden md:block  md:absolute left-85 bottom-208  opacity-50 ">
+            <img src="./src/asset/image/Polygon 7.png" alt="student" />
+      </div>
+      <div class="hidden md:block  md:absolute left-380 bottom-200  opacity-80 ">
+            <img src="./src/asset/image/Polygon 7.png" alt="student" />
+      </div>
   </div>
+  
     </section>
-    <section class="w-[100%] flex flex-col  items-center justify-center bg-white text-black  mt-10 bg-[linear-gradient(to_right,_#8057D8_0%,_#F0F3FF_0%,_#D9ECFF_100%)] md:relative">                  
+    <section class="w-[100%] flex flex-col  items-center justify-center bg-white text-black mt-10 bg-[linear-gradient(to_right,_#8057D8_0%,_#F0F3FF_0%,_#D9ECFF_100%)] md:relative">                  
       <div class="flex flex-col justify-center items-center mb-30 py-10">
           <h1 class="font-righteous text-mycolor text-[45px]">Testimonials</h1>
           <p class="font-righteous text-[#4E596B] text-lg md:text-xl">What our student say about us</p>
@@ -339,42 +365,52 @@
             <img src="./src/asset/image/testemonialimg.png" class="mix-blend-multiply" alt="image not found">
           </div>
       </div> 
-      <div class="flex flex-col flex-wrap md:flex-row  items-center justify-center w-[90%] mt-[20px] gap-y-30 mb-40  " >
+      <div class="flex flex-col flex-wrap md:flex-row  items-center justify-center w-[100%] mt-[20px] gap-y-10 mb-40 mx-auto " >
           <!-- Course Card -->
-          <div class="w-full flex flex-col sm:w-[80%] md:w-[30%] bg-white rounded-2xl shadow bg-white shadow-md rounded-lg p-10  right-68 top-12 md:relative ">
+          <div class="w-full flex flex-col sm:w-[80%] md:w-[25%] bg-white rounded-2xl shadow bg-white shadow-md rounded-lg p-10  right-54 top-12 md:relative ">
             <img src="./src/asset/image/th (1) 4.png" alt="Avatar" class="w-16 h-16 rounded-full mx-auto -mt-19  border-4 border-white">
             <p class="mt-4 text-gray-700">Such an amazing trainer and easily understand the entire syllabus, and the guidance will be super and good to the way of explaining.</p>
             <div class="mt-4 text-yellow-500 text-xl">
                 ★★★★☆
             </div>
           </div>
-          <div class="w-full flex flex-col sm:w-[80%] md:w-[30%] bg-white rounded-2xl shadow bg-white shadow-md rounded-lg p-10  z-1  md:absolute">
+          <div class="w-full flex flex-col sm:w-[80%] md:w-[25%] bg-white rounded-2xl shadow bg-white shadow-md rounded-lg p-10  z-1  md:absolute">
             <img src="./src/asset/image/th (1) 4.png" alt="Avatar" class="w-16 h-16 rounded-full mx-auto -mt-19  border-4 border-white">
             <p class="mt-4 text-gray-700">Such an amazing trainer and easily understand the entire syllabus, and the guidance will be super and good to the way of explaining.</p>
             <div class="mt-4 text-yellow-500 text-xl">
                 ★★★★☆
             </div>
           </div>
-          <div class="w-full sm:w-[80%] md:w-[30%] bg-white rounded-2xl shadow bg-white shadow-md rounded-lg p-10 left-68  top-12 md:relative">
+          <div class="w-full sm:w-[80%] md:w-[25%] bg-white rounded-2xl shadow bg-white shadow-md rounded-lg p-10 left-54  top-12 md:relative">
             <img src="./src/asset/image/th (1) 4.png" alt="Avatar" class="w-16 h-16 rounded-full mx-auto -mt-19  border-4 border-white">
             <p class="mt-4 text-gray-700">Such an amazing trainer and easily understand the entire syllabus, and the guidance will be super and good to the way of explaining.</p>
             <div class="mt-4 text-yellow-500 text-xl">
                 ★★★★☆
             </div>
           </div>
-        
           </div>
+          
+          <div class="md:absolute bottom-0 right-0 flex flex-row justify-around gap-5 p-4 ">
+             <div class="border border-blue-500 p-2 rounded-full">
+              <i class="fas fa-arrow-left text-blue-500"></i>
+              </div>
+              <!-- Right Arrow: Blue Background -->
+              <div class="border border-blue-500 p-2 rounded-full">
+                <i class="fas fa-arrow-right text-blue-500"></i>
+              </div>
+          </div>
+</div>
       </section>
 
 <footer class="bg-[linear-gradient(45deg,_#931BBD_30%,_#477AE3_100%)] text-black">
   <div class="px-4 py-5 flex flex-col md:flex-row gap-10 md:gap-10 justify-between items-start">
-  <div class="mr-50">
-    <h3 class="font-bold mb-4 w-[100%] text-3xl">Connect</h3>
+  <div class="mr-30">
+    <h3 class="font-bold mb-4  text-3xl">Connect</h3>
     <img src="./src/asset/image/Askmeidentity 2.png" class="mix-blend-multiply"/>
-    <p class="text-sm w-[100%]">Sri Jagannath Nivas,8-1-164/345/B/1,<br>Pragati Colony, Mailardevpally, Nawaab<br> Saheb Kunta, Hyd, 500005</p>
+    <p class="text-sm w-full">Sri Jagannath Nivas,8-1-164/345/B/1,<br>Pragati Colony, Mailardevpally, Nawaab<br> Saheb Kunta, Hyd, 500005</p>
   </div>
-  <div class="container flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-start">
-  <div class="flex-1">
+  <div class="container flex flex-col flex-wrap md:flex-row gap-10 md:gap-20 justify-between items-start md:basis[45%]">
+  <div class="">
     <h3 class="font-bold mb-4 text-3xl">Classes</h3>
     <ul class="space-y-2 text-xl">
       <li>Classroom courses</li>
@@ -384,7 +420,7 @@
       <li>Offline Courses</li>
     </ul>
   </div>
-  <div class="flex-1">
+  <div class="">
     <h3 class="font-bold mb-4 text-3xl">Community</h3>
     <ul class="space-y-2 text-xl">
       <li>Learners</li>
@@ -394,7 +430,7 @@
       <li>Blog</li>
     </ul>
   </div>
-  <div class="flex-1">
+  <div class="">
     <h3 class="font-bold mb-4 text-3xl">Quick Links</h3>
     <ul class="space-y-2 text-xl">
       <li>Home</li>
@@ -404,7 +440,7 @@
       <li>Programs</li>
     </ul>
   </div>
-  <div class="flex-1">
+  <div class="">
     <h3 class="font-bold mb-4 text-3xl">More</h3>
     <ul class="space-y-2 text-xl">
       <li>Press</li>
@@ -418,16 +454,16 @@
 </div>
 
 </div>
-  <div class="bg-[linear-gradient(180deg,_#0351AE_30%,_#A542C8_90%)] flex flex-row p-5  justify-center items-center gap-10">
+  <div class="bg-[linear-gradient(to_top,_#A542C8,_#0351AE)] flex flex-row p-5  justify-center items-center gap-10">
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/Instagram.png"/></div>
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/WhatsApp.png"/></div>
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/Twitter.png"/></div>
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/LinkedIn.png"/></div>
-      <div class="bg-white rounded-full p-3"><img src="./src/asset/image/YouTube.png"/></div>
+      <div class="bg-white rounded-full p-3"><img src="./src/asset/image/YouTube.png"/></div>    
 </div>
- <div class="text-center mt-8 bg-[#001AFF]">
+ <div class="text-center p-2 bg-[#001AFF]">
             <p>© 2023 askmeidentity. All Rights Reserved.</p>
-  </div>
+  </div> 
     </footer>
 
 
