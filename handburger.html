@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AskMeIdentity Landing Page</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- In your HTML <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style type="text/tailwindcss">
+  @layer base {
+  .font-righteous
+  {
+    font-family:Righteous,cursive;
+  }
+  .font-rowdies
+  {
+   
+  font-family:"Rowdies", sans-serif;
+
+  }
+  .font-saira
+  {
+   
+  font-family: "Saira", sans-serif;
+    
+  }
+}
+@theme
+  {
+      --color-mycolor:#0E38CD;
+      --color-headcolor:#4883FF;
+     
+  }
+</style>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<header class="flex flex-wrap justify-center gap-x-80 items-center px-10  bg-white text-black md:px-10">
+  <!-- Logo and Hamburger Icon -->
+  <div class="flex justify-center  gap-50">
+    <img src="./src/asset/image/Askmeidentity 2.png" alt="Logo" class="h-10 w-10 rounded-full" />
+    <button id="menuToggle" class="block md:hidden ml-4 text-2xl">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Desktop Navigation -->
+  <nav class="hidden md:flex gap-6 items-center text-[20px] font-righteous">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Courses</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Desktop Icons & Authentication -->
+  <div class="hidden md:flex gap-6 items-center">
+    <a href="#" class="text-xl hover:underline">Login</a>
+    <button class="text-xl bg-[linear-gradient(101.61deg,_#083F9B_0%,_#7F56D9_93.39%)] text-white px-4 py-2 rounded-lg">
+      Signup
+    </button>
+  </div>
+
+  <!-- Mobile Icons (Hidden by default) -->
+  <div id="mobileMenu" class="hidden absolute top-16 left-0 w-full bg-white p-4 shadow-lg md:hidden">
+    <div class="flex gap-6 items-center justify-between">
+      <!-- Trash Icon with Badge -->
+      <div class="relative w-[25px] h-[25px] flex items-center justify-center">
+        <i class="fas fa-trash"></i>
+        <span class="absolute -top-2 -right-2 bg-[#2ac4ae] text-white rounded-full px-1.5 text-[10px] leading-none">0</span>
+      </div>
+
+      <!-- User Icon -->
+      <div class="w-[25px] h-[25px] flex items-center justify-center">
+        <i class="fas fa-user"></i>
+      </div>
+
+      <!-- Search Icon -->
+      <div class="w-[25px] h-[25px] flex items-center justify-center">
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+</body>
+</html>

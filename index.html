@@ -44,33 +44,37 @@
 
 <body class="text-black bg-white font-righteous overflow-x-hidden w-full max-w-screen  mx-auto flex flex-col  content-center">
   <!-- Header -->
-  <header class="flex flex-wrap justify-between items-center px-10  bg-white text-black md:px-10">
-    <div class="flex items-center gap-2">
-      <img src="./src/asset/image/Askmeidentity 2.png" alt="Logo" class=" rounded-full"/>
+  <header class="flex flex-wrap justify-center gap-x-50 items-center md:px-10  md:py-0  bg-white text-black md:px-10 relative">
+    <div class="flex items-center gap-30">
+      <img src="./src/asset/image/Askmeidentity 2.png" alt="Logo" class="w-full rounded-full"/>
+      <button id="menuToggle" class="block md:hidden ml-4 text-2xl">
+      <i class="fas fa-bars"></i>
+    </button>
     </div>
-    <nav class="flex gap-2 justify-center md:gap-6 md:justify-around items-center text-[20px] font-righteous">
+    <nav class="md:flex gap-2 justify-center md:gap-6 md:justify-around items-center text-[20px] font-righteous hidden md:block">
       <a href="#">Home</a>
-      <a href="#">About</a>
+      <a href="#">About</a> 
       <a href="#">Courses</a>
       <a href="#">Contact</a>
     </nav>
-    <div class="flex gap-6 items-center justify-betweeen w-[130px] h-[33px]">
-      <!-- Trash Icon with Badge -->
-      <div class="relative w-[25px] h-[25px] flex items-center justify-center">
-        <i class="fas fa-trash"></i>
-        <span class="absolute -top-2 -right-2 bg-[#2ac4ae] text-white rounded-full px-1.5 text-[10px] leading-none">0</span>
-      </div>
-    
-      <!-- User Icon -->
-      <div class="w-[25px] h-[25px] flex items-center justify-center">
-        <i class="fas fa-user"></i>
-      </div>
-    
-      <!-- Search Icon -->
-      <div class="w-[25px] h-[25px] flex items-center justify-center">
-        <i class="fas fa-search"></i>
-      </div>
-    </div>
+  <div id="mobileMenu" class="hidden md:flex justify-center gap-6 items-center bg-white py-4 shadow-lg md:shadow-none md:block">
+  <div class="flex justify-center gap-10 " >
+  <!-- Trash Icon with Badge -->
+  <div class="relative w-[25px] h-[25px] flex items-center justify-center">
+    <i class="fas fa-trash"></i>
+    <span class="absolute -top-2 -right-2 bg-[#2ac4ae] text-white rounded-full px-1.5 text-[10px] leading-none">0</span>
+  </div>
+  <!-- User Icon -->
+  <div class="w-[25px] h-[25px] flex items-center justify-center">
+    <i class="fas fa-user"></i>
+  </div>
+
+  <!-- Search Icon -->
+  <div class="w-[25px] h-[25px] flex items-center justify-center">
+    <i class="fas fa-search"></i>
+  </div>
+  </div>
+</div>
     
     <div class="hidden md:flex gap-6 items-center">
       <a href="#" class="text-xl hover:underline">Login</a>
@@ -82,9 +86,9 @@
   <div class="bg-[linear-gradient(45deg,_#4A16BD_40%,_#04016C_100%,_#ffffff_100%)]  max-w-screen flex justify-center  py-5 text-white "> 
     <div class="flex flex-col  mx-auto md:flex-row items-start justify-between w-[90%] mt-20 md:relative" >
     <div class=" flex max-w-xl  flex-col items-start justify-start">
-      <p class="uppercase leading-[20px] tracking-[3px] text-[18px]  text-gray-300 text-left">Successful coaches are visionaries</p>
-      <h1 class="text-[80px] font-bold  mt-4">
-        Good <span class="text-[80px] text-mycolor">coaching</span> is good teaching & nothing else.
+      <p class="uppercase leading-[20px] tracking-[3px] text-[10px] md:text-[18px]  text-gray-300 text-left">Successful coaches are visionaries</p>
+      <h1 class="text-[45px] md:text-[80px] font-bold  mt-4">
+        Good <span class="text-[40px] md:text-[80px] text-mycolor">coaching</span> is good teaching & nothing else.
       </h1>
       <div class="mt-8 flex flex-row items-center justify-around gap-4">
         <button class="border border-white px-5 py-2 rounded-lg">View Courses</button>
@@ -92,13 +96,11 @@
       </div>
       <div class="mt-8 bg-white rounded-lg p-2 flex items-center w-full max-w-md">
         <input
-          type="text"
-          placeholder="What do you want to learn today?"
-          class="flex-1 px-4 py-2 text-black outline-none"
-        />
-        <button class="bg-[linear-gradient(101.61deg,_#083F9B_0%,_#7F56D9_93.39%)] text-white px-4 py-2 rounded-md"><i class="fa-solid fa-magnifying-glass pr-4"></i>Search</button>
+          type="text" placeholder="What do you want to learn today?" class="flex-1 md:px-4 md:py-2 py-1 text-black outline-none text-[14px] md:text-[16px]"/>
+        <button class="bg-[linear-gradient(101.61deg,_#083F9B_0%,_#7F56D9_93.39%)] text-white md:px-4 md:py-2 py-1 px-2 text-sm rounded-md"><i class="fa-solid fa-magnifying-glass pr-4"></i>Search</button>
       </div>
     </div>
+  <div class="flex flex-col gap-y-20">
     <div class="w-[300px] text-sm text-white flex items-center p-5 mb-auto mt-30 ">
       <div>
         <img src="./src/asset/image/head-description.png" alt="Coach" class="w-[146px] h[24px]" />
@@ -111,41 +113,43 @@
         </p>
         <p class="mt-2 text-blue-300 text-xs">4.9</p>
      </div>
-    </div >    
-    <div class="flex justify-center items-center relative  w-full max-w-[500px]">
-      <img src="./src/asset/image/women-image.png" alt="Coach" class=" object-cover w-full h-auto z-10 border-0" />
-      <div class="absolute bottom-0 w-full h-full  flex items-center justify-center gap-x-2.5 z-[1] top-10 ">
-        <div>
-          <img src="./src/asset/image/ellipe1.png" class="w-full h-full object-cover "/>
-        </div>
-      </div>
-    </div>
-    <div class="hidden fixed md:block md:absolute left-180 top-120 ">
+    </div > 
+    <div class="hidden  md:block  ">
       <div class="border-t-2 border-l-2 border-r-2 border-dashed border-[#D9D9D9] pt-6 px-6 rounded-t-full">
         <div class="border-t-2 border-l-2 border-r-2 border-solid border-[#D9D9D9] rounded-t-full overflow-hidden">
           <img src="./src/asset/image/page_1design.png" class="w-full h-full object-cover pt-6 px-6" alt="image not found">
         </div>
       </div>
-    </div> 
+    </div>  
+  </div>  
+    <div class="flex justify-center items-center relative gap-y-10 w-full max-w-[500px]">
+      <img src="./src/asset/image/women-image.png" alt="Coach" class=" object-cover w-full h-auto z-10 border-0 hidden md:block" />
+      <div class="hidden md:block absolute bottom-0 w-full h-full  md:flex items-center justify-center gap-x-2.5 z-[1] top-10 ">
+        <div>
+          <img src="./src/asset/image/ellipe1.png" class="w-full h-full object-cover "/>
+        </div>
+      </div>
+    </div>
+    
     </div> 
   </div>    
 </div>
 </div>
   <!-- Logos Section -->
   <section class="bg-[linear-gradient(180deg,_#2E08C7_0%,_#7E08C7_100%)] py-10">
-    <div class="flex justify-around gap-10 items-center flex-wrap px-10">
-      <img src="./src/asset/image/brand1.png.png" class="h-8" alt="Spotify" />
-      <img src="./src/asset/image/brand2.png.png" class="h-8" alt="Amazon" />
-      <img src="./src/asset/image/brand1.png.png" class="h-8" alt="Spotify" />
-      <img src="./src/asset/image/brand3.png.png" class="h-8" alt="Cisco" />
-      <img src="./src/asset/image/brand4.png.png" class="h-8" alt="Logitech" />
-      <img src="./src/asset/image/brand2.png.png" class="h-8" alt="Amazon" />
+    <div class="flex justify-center gap-5 md:gap:10 md:justify-around items-center  px-10">
+      <img src="./src/asset/image/brand1.png.png" class="h-6 sm:h-8 md:h-10 lg:h-12" alt="Spotify" />
+      <img src="./src/asset/image/brand2.png.png" class="h-6 sm:h-8 md:h-10 lg:h-12" alt="Amazon" />
+      <img src="./src/asset/image/brand1.png.png" class="hidden md:block h-6 sm:h-8 md:h-10 lg:h-12" alt="Spotify" />
+      <img src="./src/asset/image/brand3.png.png" class="h-6 sm:h-8 md:h-10 lg:h-12" alt="Cisco" />
+      <img src="./src/asset/image/brand4.png.png" class="h-6 sm:h-8 md:h-10 lg:h-12" alt="Logitech" />
+      <img src="./src/asset/image/brand2.png.png" class="hidden md:block h-6 sm:h-8 md:h-10 lg:h-12" alt="Amazon" />
     </div>
   </section>
   <section class="bg-[linear-gradient(to_bottom,_#F0F3FF,_#D9ECFF)] w-[100%] flex flex-col  items-center justify-center bg-white text-black  mt-1 py-20 md:relative">                  
       <div class="flex flex-col justify-center items-center pb-5">
-          <h1 class="font-rowdies color-black text-[45px]">Featured <span class="text-headcolor">Course</span></h1>
-          <p class="font-[rowdies] color-black text-[25px]">The feature courses are we invented our teaching part</p>
+          <h1 class="font-rowdies color-black text-[25px] md:text-[45px]">Featured <span class="text-headcolor">Course</span></h1>
+          <p class="font-[rowdies] color-black text-[12px] md:text-[25px]">The feature courses are we invented our teaching part</p>
           <div class="hidden md:block  md:absolute left-30  top-20">
             <img src="./src/asset/image/pg2-headimg.png" class="mix-blend-multiply" alt="image not found">
           </div>
@@ -222,8 +226,8 @@
  
   <section class="bg-[linear-gradient(45deg,_#739FE8_30%,_#4F18CA_100%)] w-[100%] h-full flex flex-col  justify-center items-center bg-white text-white  py-20 md:relative">
       <div class="flex flex-col justify-center items-center w-full mb-20 ">
-        <h1 class="font-rowdies color-black text-[45px] ">Why <span class="text-mycolor"> learn</span> with our courses?</h1>
-        <p class="font-saira color-black text-[25px] ml-5"> We are providing the best courses and top classes.And <br>extradinery placement training.....</p>
+        <h1 class="font-rowdies color-black text-[25px] md:text-[45px] ">Why <span class="text-mycolor"> learn</span> with our courses?</h1>
+        <p class="font-saira color-black text-[13px] md:text-[25px] ml-5"> We are providing the best courses and top classes.And <br>extradinery placement training.....</p>
       </div> 
       <div class="flex flex-col md:flex-row justify-center align-center gap-20 p-10 ">
         <div class="flex flex-col items-center border-r-2 border-dashed border-white-400  p-10">
@@ -258,51 +262,51 @@
    <section class="w-[100%] flex flex-col  items-center justify-center bg-white text-black bg-[linear-gradient(to_bottom,_#F0F3FF,_#D9ECFF)] py-20">
                    
     <div class="flex flex-col justify-center items-center mb-10">
-        <h1 class="font-rowdies color-black text-[45px]">Top <span class="text-headcolor">Categories</span></h1>
-        <p class="font-rowdies color-black text-[25px]">100+ unique online course list designs</p>
+        <h1 class="font-rowdies color-black text-[25px]  md:text-[45px]">Top <span class="text-headcolor">Categories</span></h1>
+        <p class="font-rowdies color-black text-[15px] md:text-[25px]">100+ unique online course list designs</p>
     </div> 
-    <div class="flex flex-wrap flex-col md:flex-row items-center justify-between w-[90%] mt-[20px] gap-3 my-20 " >
+    <div class="flex flex-wrap flex-col md:flex-row items-center justify-between w-[90%] mt-[20px] gap-3 gap-y-8 my-20 " >
       <!-- Course Card -->
-      <div class="w-full sm:w-[45%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
+      <div class="w-full sm:w-[20%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
         <img src="./src/asset/image/page4-1.png" alt="Course" class="rounded-xl">
-        <h3 class="text-[25px] py-5 text-center text-[#324361]">Digtal Marketing</h3 >
-        <h3 class="font-bold text-[18px] py-5 ">25 Courses</h3>
+        <h3 class="md:text-[25px] py-5 text-center text-[#324361]">Digtal Marketing</h3 >
+        <h3 class="font-bold md:text-[18px] py-5 ">25 Courses</h3>
       </div>
-      <div class="w-full sm:w-[45%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
+      <div class="w-full sm:w-[20%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
         <img src="./src/asset/image/page4-2.png" alt="Course" class="rounded-xl">
-        <h3 class="text-[25px] py-5 text-center text-[#324361]">Web Development</p>
-        <h3 class="font-bold text-[18px] py-5 ">16 Courses</h3>
+        <h3 class="md:text-[25px] py-5 text-center text-[#324361]">Web Development</p>
+        <h3 class="font-bold md:text-[18px] py-5 ">16 Courses</h3>
       </div>
-      <div class="w-full sm:w-[45%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
+      <div class="w-full sm:w-[20%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
         <img src="./src/asset/image/page4-3.png" alt="Course" class="rounded-xl">
-        <p class="text-[25px] py-5 text-center text-[#324361]">Art & Humanities</p>
-        <h3 class="font-bold text-[18px] py-5 ">76 Courses</h3>
+        <p class="md:text-[25px] py-5 text-center text-[#324361]">Art & Humanities</p>
+        <h3 class="font-bold md:text-[18px] py-5 ">76 Courses</h3>
       </div>
-      <div class="w-full sm:w-[45%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
+      <div class="w-full sm:w-[20%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
         <img src="./src/asset/image/page4-4.png" alt="Course" class="rounded-xl">
-        <p class="text-[25px] py-5 text-center text-[#324361]">Personal Development</p>
-        <h3 class="font-bold text-[18px] py-5 ">22 Courses</h3>
+        <p class="md:text-[25px] py-5 text-center text-[#324361]">Personal Development</p>
+        <h3 class="font-bold md:text-[18px] py-5 ">22 Courses</h3>
       </div>
-      <div class="w-full sm:w-[45%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
+      <div class="w-full sm:w-[20%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
         <img src="./src/asset/image/page4-5.png" alt="Course" class="rounded-xl">
-        <p class="text-[25px] py-5 text-center text-[#324361]">IT and Software</p>
-        <h3 class="font-bold text-[18px] py-5 ">110 Courses</h3>
+        <p class="md:text-[25px] py-5 text-center text-[#324361]">IT and Software</p>
+        <h3 class="font-bold md:text-[18px] py-5 ">110 Courses</h3>
       </div>
-      <div class="w-full sm:w-[45%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
+      <div class="w-full sm:w-[20%] lg:w-[15%] gap-10 p-15 bg-white rounded-3xl shadow flex flex-col justify-center items-center ">
         <img src="./src/asset/image/page4-6.png" alt="Course" class="rounded-xl">
-        <p class="text-[25px] py-5 text-center text-[#324361]">Graphic Design</p>
-        <h3 class="font-bold text-[18px] py-5 ">85 Courses</h3>
+        <p class="md:text-[25px] py-5 text-center text-[#324361]">Graphic Design</p>
+        <h3 class="font-bold md:text-[18px] py-5 ">85 Courses</h3>
       </div>
     </div>
   </section>
-    <section class="w-[100%] h-full flex flex-col  justify-center items-center bg-white text-white  mt-10 py-10 z-2 md:relative ">
-      <div class="bg-[linear-gradient(-103.31deg,_#E441FF_0%,_#1901F98F_44%,_#0A6EFC38_78%,_#00B3FF00_100%)] flex flex-col justify-center items-center   w-4/5 max-w-6xl rounded-2xl p-18  md:relative ">
-      <h1 class="text-white text-[45px]  text-center mb-4">Subscribe For Get Update<br>Every New Courses</h1>
-      <p class="text-white/80 text-center mb-6">20k+ students daily learn with Eduvi. Subscribe for new courses.</p>
+    <section class="w-[100%] h-full flex flex-col justify-center items-center bg-white text-white  mt-10 py-10 z-2 md:relative ">
+      <div class="bg-[linear-gradient(-103.31deg,_#E441FF_0%,_#1901F98F_44%,_#0A6EFC38_78%,_#00B3FF00_100%)] flex flex-col justify-center items-center w-4/5 max-w-6xl rounded-2xl p-18  md:relative ">
+      <h1 class="text-white  md:text-[45px]  text-center mb-4 ">Subscribe For Get Update<br>Every New Courses</h1>
+      <p class="text-white/80 text-center mb-6 text-[8px] md:text-[16px]">20k+ students daily learn with Eduvi.Subscribe for new courses.</p>
       <div class="container mx-auto px-4 py-8 flex flex-col md:flex-row justify-center ">
         <div class="flex flex-col  w-full  md:flex-row  md:max-w-md gap-y-10 ">
-        <input type="email" placeholder="Enter your email" class="md:px-4 md:py-4 px-3 bg-white opacity-50 text-black  md:rounded-l-xl focus:outline-none w-full">
-        <button class="bg-blue-900 px-2 py-2 md:px-6 md:py-4  text-white font-semibold flex-shrink  md:rounded-r-xl">Subscribe
+        <input type="email" placeholder="Enter your email" class="text-[12px] md:text-[16px] md:px-4 md:py-4 p-3 bg-white opacity-50 text-black rounded-xl md:rounded-r-none focus:outline-none w-full">
+        <button class="bg-blue-900 px-2 py-2 md:px-6 md:py-4  text-white  flex-shrink rounded-xl md:rounded-l-none md:text-[16px]">Subscribe
         </button>    
         </div>
     </div>
@@ -328,7 +332,7 @@
     </div>
    
      <div class="flex flex-col md:flex-row justify-center items-center w-full max-w-3xl mt-30 mb-10 md:max-w-6xl">
-      <div class="relative flex justify-center items-center w-full h-full">
+      <div class="relative flex justify-center items-center w-[90%] md:w-full h-full">
       <img src="./src/asset/image/Rectangle 8691.png" class="w-full h-auto"/>
       <div class="absolute w-[70px] h-[70px] md:w-[150px] md:h-[150px] rounded-full  bg-[#F5EBEB] opacity-40 "></div>  
       <div class="absolute w-[100px] h-[100px] md:w-[200px] md:h-[200px] rounded-full bg-[#FFFAEC] opacity-20 "></div>  
@@ -357,13 +361,13 @@
     </section>
     <section class="w-[100%] flex flex-col  items-center justify-center bg-white text-black mt-10 bg-[linear-gradient(to_right,_#8057D8_0%,_#F0F3FF_0%,_#D9ECFF_100%)] md:relative">                  
       <div class="flex flex-col justify-center items-center mb-30 py-10">
-          <h1 class="font-righteous text-mycolor text-[45px]">Testimonials</h1>
-          <p class="font-righteous text-[#4E596B] text-lg md:text-xl">What our student say about us</p>
+          <h1 class="font-righteous text-mycolor text-[25px] md:text-[45px]">Testimonials</h1>
+          <p class="font-righteous text-[#4E596B] text-[15px] md:text-xl">What our student say about us</p>
           <div class="hidden md:block  md:absolute left-30  top-10">
             <img src="./src/asset/image/testemonialimg.png" class="mix-blend-multiply" alt="image not found">
           </div>
       </div> 
-      <div class="flex flex-col flex-wrap md:flex-row  items-center justify-center w-[100%] mt-[20px] gap-y-10 mb-40 mx-auto " >
+      <div class="flex flex-col flex-wrap md:flex-row  items-center justify-center w-[80%] md:w-[100%] mt-[20px] gap-y-15 mb-40 mx-auto " >
           <!-- Course Card -->
           <div class="w-full flex flex-col sm:w-[80%] md:w-[25%] bg-white rounded-2xl shadow bg-white shadow-md rounded-lg p-10  right-54 top-12 md:relative ">
             <img src="./src/asset/image/th (1) 4.png" alt="Avatar" class="w-16 h-16 rounded-full mx-auto -mt-19  border-4 border-white">
@@ -401,16 +405,16 @@
       </section>
 
 <footer class="bg-[linear-gradient(45deg,_#931BBD_30%,_#477AE3_100%)] text-black">
-  <div class="px-4 py-5 flex flex-col md:flex-row gap-10 md:gap-10 justify-between items-start">
+  <div class="px-4 py-5 flex flex-col md:flex-row gap-10 md:gap-60 justify-center items-start">
   <div class="mr-30">
-    <h3 class="font-bold mb-4  text-3xl">Connect</h3>
+    <h3 class="font-bold mb-4 md:text-3xl">Connect</h3>
     <img src="./src/asset/image/Askmeidentity 2.png" class="mix-blend-multiply"/>
     <p class="text-sm w-full">Sri Jagannath Nivas,8-1-164/345/B/1,<br>Pragati Colony, Mailardevpally, Nawaab<br> Saheb Kunta, Hyd, 500005</p>
   </div>
-  <div class="container flex flex-col flex-wrap md:flex-row gap-10 md:gap-20 justify-between items-start md:basis[45%]">
+  <div class="container flex flex-col flex-wrap md:flex-row gap-10 md:gap-40 justify-center items-start md:basis[45%]">
   <div class="">
-    <h3 class="font-bold mb-4 text-3xl">Classes</h3>
-    <ul class="space-y-2 text-xl">
+    <h3 class="font-bold mb-4 md:text-3xl">Classes</h3>
+    <ul class="space-y-2 md:text-xl">
       <li>Classroom courses</li>
       <li>Virtual classroom courses</li>
       <li>E-learning courses</li>
@@ -419,8 +423,8 @@
     </ul>
   </div>
   <div class="">
-    <h3 class="font-bold mb-4 text-3xl">Community</h3>
-    <ul class="space-y-2 text-xl">
+    <h3 class="font-bold mb-4 md:text-3xl">Community</h3>
+    <ul class="space-y-2 md:text-xl">
       <li>Learners</li>
       <li>Partners</li>
       <li>Developers</li>
@@ -429,8 +433,8 @@
     </ul>
   </div>
   <div class="">
-    <h3 class="font-bold mb-4 text-3xl">Quick Links</h3>
-    <ul class="space-y-2 text-xl">
+    <h3 class="font-bold mb-4 md:text-3xl">Quick Links</h3>
+    <ul class="space-y-2 md:text-xl">
       <li>Home</li>
       <li>Courses</li>
       <li>Admissions</li>
@@ -439,8 +443,8 @@
     </ul>
   </div>
   <div class="">
-    <h3 class="font-bold mb-4 text-3xl">More</h3>
-    <ul class="space-y-2 text-xl">
+    <h3 class="font-bold mb-4 md:text-3xl">More</h3>
+    <ul class="space-y-2 md:text-xl">
       <li>Press</li>
       <li>Investors</li>
       <li>Terms</li>
@@ -453,13 +457,13 @@
 
 </div>
   <div class="bg-[linear-gradient(to_top,_#A542C8,_#0351AE)] flex flex-row p-5  justify-center items-center gap-10">
-      <div class="bg-white rounded-full p-3"><img src="./src/asset/image/Instagram.png"/></div>
+      <div class="bg-white rounded-full p-3 "><img src="./src/asset/image/Instagram.png"/></div>
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/WhatsApp.png"/></div>
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/Twitter.png"/></div>
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/LinkedIn.png"/></div>
       <div class="bg-white rounded-full p-3"><img src="./src/asset/image/YouTube.png"/></div>    
 </div>
- <div class="text-center p-2 bg-[#001AFF]">
+ <div class="text-center p-2 bg-[#001AFF] md:text[15px]">
             <p>© 2023 askmeidentity. All Rights Reserved.</p>
   </div> 
     </footer>
@@ -468,5 +472,13 @@
 <style>
 
 </style>
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 </body>
 </html>
