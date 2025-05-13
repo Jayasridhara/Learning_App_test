@@ -1,0 +1,40 @@
+Learning App is an online learning platform that provides various courses across different domains such as Digital Marketing, Web Development, Personal Development, IT & Software, Graphic Design, and more. The platform connects students with experienced coaches, offers both paid and free courses, and helps learners enhance their skills through high-quality content and expert guidance.
+
+Key Features:
+User Authentication:
+
+Login and Signup functionality for new and returning users.
+
+Course Listings:
+
+Comprehensive catalog of courses categorized by domain (e.g., Digital Marketing, Web Development, IT & Software).
+
+Each course includes information on duration, student count, and price.
+
+Featured Courses:
+
+Highlighted courses to attract user attention.
+
+Coach Profiles:
+
+Detailed information about coaches, including ratings and testimonials.
+
+Search Functionality:
+
+Quick course search to help users find courses based on keywords.
+
+Subscription Section:
+
+Email subscription for course updates and new releases.
+
+Testimonials:
+
+Reviews and feedback from students to establish credibility and social proof.
+
+Responsive Design:
+
+Fully responsive layout using Tailwind CSS, ensuring a seamless experience across devices.
+
+Footer Navigation:
+
+Links to key pages such as Home, Courses, Community, and Contact.
